@@ -6,7 +6,7 @@ const NONE_SELECTED = 0
 
 let customers = '1'
 //changed location variable to customerLocation as it was confliting with JS object
-let customerLocation = 'NAM'
+let customerLocation = 'RSA'
 let currency = null
 let shipping = 0
 
@@ -24,7 +24,7 @@ if (customerLocation === 'RSA') {
 
 // Added assignment opps to batteries and toys and removed quotation marks around NONE_SELECTED
 let shoes = 300 * 1
-let toys = 100 * 1
+let toys = 100 * 5
 let shirts = 150 * NONE_SELECTED
 let batteries = 35 * 2
 let pens = 5 * NONE_SELECTED
