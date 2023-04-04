@@ -6,7 +6,7 @@ const NONE_SELECTED = 0
 
 let customers = '1'
 //changed location variable to customerLocation as it was confliting with JS object
-let customerLocation = 'RSA'
+let customerLocation = 'NAM'
 let currency = null
 let shipping = 0
 
@@ -29,8 +29,8 @@ let shirts = 150 * NONE_SELECTED
 let batteries = 35 * 2
 let pens = 5 * NONE_SELECTED
 
-//Added missing brackets
-if (shoes + toys + shirts + batteries + pens > 1000) {
+//Added missing brackets and conditional for when country is NAM and basket is more than $60
+if (shoes + toys + shirts + batteries + pens > 1000 && currency === 'R' || shoes + toys + shirts + batteries + pens > 60 && currency === '$') {
 	if (customerLocation === 'NAM' || customerLocation === 'RSA' && customers < 2) {
             //removed calcShipping function and additional iff statement as it could be made one as above
 		    shipping = 0
@@ -42,4 +42,4 @@ if (shoes + toys + shirts + batteries + pens > 1000) {
 if (shipping === 0 && customers !== 1) { console.log(FREE_WARNING) }
 
 //Changed warniing to BANNED_WARNIN
-customerLocation === 'NK' ? console.log(BANNED_WARNIN) : console.log('price', currency, shoes + toys + batteries + pens + shirts + shipping)
+customerLocation === 'NK' ? console.log(BANNED_WARNIN) : console.log('price', currency, shoes + toys + batteries + pens + shirts + shipping, shipping)
